@@ -293,7 +293,7 @@ export const Navbar = ({ theme, handleTheme }) => {
           <Link className={styles.link} to="">
             Table
           </Link>
-          <Link className={styles.link} to="">
+          <Link className={styles.link} to="/videos">
             Videos
           </Link>
           <Link className={styles.link} to="">
