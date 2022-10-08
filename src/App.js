@@ -21,10 +21,13 @@ import { Score } from "./Component/liveScore/score";
 import MathInfo from "./Component/home/home";
 import Matches from "./Component/match/matches";
 import { LiveScoreBox } from "./Component/LiveScorebox/LiveScore";
+import Videos from "./Pages/Videos";
+import SingleVideoData from "./Component/Video_page/SingleVideoData";
+
 export function App() {
   const { theme, handleTheme, AuthenticationForNav } =
     React.useContext(themecontext);
-  console.log(theme);
+  // console.log(theme);
   return (
     <ChakraProvider>
       <>
@@ -49,6 +52,8 @@ export function App() {
           <Route path="/commentry" element={<Commentary />}></Route>
           <Route path="/playingxi" element={<PlayingXI />}></Route>
           <Route path="/pointtable" element={<PonitTable />}></Route>
+          <Route path="/videos" element={<Videos/>}></Route>
+          <Route path="/:title/:heading" element={<SingleVideoData/>}></Route>
         </Routes>
       </>
     </ChakraProvider>
