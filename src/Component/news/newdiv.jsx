@@ -35,7 +35,7 @@ let i=0;
 export const NavBox=(props)=>
 {
  const  {hline,intro}=props.info
-  const theme=props.theme
+  const theme=props.themec
     //console.log(info);
    i++;
    if(i>arr.length-1){
