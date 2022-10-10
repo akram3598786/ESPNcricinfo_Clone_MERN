@@ -99,7 +99,7 @@ const Signup = () => {
               bg="#f1f2f4"
               type="text"
               size="lg"
-              name="pass"
+              name="password"
               placeholder="Enter Password.."
             />
             <Button onClick={signupfn} w="70%" colorScheme="purple" size="lg">
