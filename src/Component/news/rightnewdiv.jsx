@@ -37,7 +37,7 @@ export const RightNavBox=(props)=>
             <Image  className={styles.rightimageNews}  height="63px" width="163px" src={imgarr[i]} alt="hy" />
         </Box>
         <Box>
-            <Heading fontSize="14px" className={styles.rightheading}>{hline}</Heading>
+            <Heading fontSize="14px">{hline}</Heading>
         </Box>
     </Flex>
     </Box>

@@ -44,9 +44,9 @@ export const NavBox=(props)=>
     
     return <Box w="970px" fontSize="16px"  border="1px solid #EDEEF0" p="20px" >
     <Flex justifyContent="space-around" >
-    <Box p="0 20px 0 0" width="290px" height="167.5px"  >
+    <Box p="0 20px 0 0"   >
  
-        <Image className={styles.imagenews} src={arr[i]} alt="hy" />
+        <Image className={styles.imagenews} width="290px" height="167.5px" src={arr[i]} alt="hy" />
     </Box>
     <Box >
         <Heading fontSize="16px" >{hline}</Heading>

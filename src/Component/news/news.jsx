@@ -9,7 +9,6 @@ import {
 } from "../../Redux/centrebox/action";
 import { Fetchdata } from "../../Redux/centrebox/action";
 import { RightNavBox } from "./rightnewdiv";
-import { Newsmid } from "../newsmidbox/newsmid";
 import {
   Box,
     Flex,
@@ -28,12 +27,7 @@ export const News = ({ theme }) => {
     dispatch(Fetchdata());
   }, []);
 
-  // if(newsdisplay.length>4){
-  // for(let i=0;i<4;i++){
-  //   arr2[i]=newsdisplay[i];
-  // }
-  // }
-  //  arr1=setarr(arr2)
+
 
   function getnewsdata() {
     dispatch(getnewsloading());
