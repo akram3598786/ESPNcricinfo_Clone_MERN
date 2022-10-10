@@ -42,15 +42,15 @@ export const NavBox=(props)=>
     i=0;
    }
     
-    return <Box w="970px" fontSize="16px"  border="1px solid #EDEEF0" p="10px" >
-    <Flex p="10px" justifyContent="space-around" >
-    <Box p="0 20px 0 0" className={styles.mainbox} >
+    return <Box w="970px" fontSize="16px"  border="1px solid #EDEEF0" p="20px" >
+    <Flex justifyContent="space-around" >
+    <Box p="0 20px 0 0" width="290px" height="167.5px"  >
  
-        <Image className={styles.imagenews} width="390px" height="162.5px"  src={arr[i]} alt="hy" />
+        <Image className={styles.imagenews} src={arr[i]} alt="hy" />
     </Box>
     <Box >
-        <Heading fontSize="16px" className={styles.head}>{hline}</Heading>
-        <p className={styles.con}>{intro}</p>
+        <Heading fontSize="16px" >{hline}</Heading>
+        <p>{intro}</p>
     </Box>
     </Flex>
     </Box>
