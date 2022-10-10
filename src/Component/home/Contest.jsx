@@ -23,6 +23,7 @@ const Contest = ({ joincontest }) => {
     <Box
       className="contest-data"
       mb="6"
+      
       display="flex"
       flexDirection="column"
       gap="5"

@@ -21,6 +21,7 @@ import { Score } from "./Component/liveScore/score";
 import MathInfo from "./Component/home/home";
 import Matches from "./Component/match/matches";
 import { LiveScoreBox } from "./Component/LiveScorebox/LiveScore";
+import { News } from "./Component/news/news";
 export function App() {
   const { theme, handleTheme, AuthenticationForNav } =
     React.useContext(themecontext);
@@ -49,6 +50,7 @@ export function App() {
           <Route path="/commentry" element={<Commentary />}></Route>
           <Route path="/playingxi" element={<PlayingXI />}></Route>
           <Route path="/pointtable" element={<PonitTable />}></Route>
+          <Route path="/news" element={<News />}></Route>
         </Routes>
       </>
     </ChakraProvider>

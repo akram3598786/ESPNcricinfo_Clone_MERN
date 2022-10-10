@@ -119,7 +119,7 @@ export const Navbar = ({ theme, handleTheme }) => {
             ) : null}
           </Link>
 
-          <Link to="" position="relative" onMouseEnter={() => setopen4(true)}>
+          <Link to="/news" position="relative" onMouseEnter={() => setopen4(true)}>
             {" "}
             News
             {open4 ? (
