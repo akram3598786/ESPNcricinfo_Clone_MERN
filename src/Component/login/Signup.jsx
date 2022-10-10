@@ -6,7 +6,7 @@ import Sideimg from "../sideimg/Sideimg";
 const init = {
   name: "",
   email: "",
-  pass: "",
+  password: "",
 };
 
 const Signup = () => {
@@ -23,15 +23,28 @@ const Signup = () => {
 
   const signupfn = () => {
     let newform = JSON.stringify(form);
-    fetch("https://rupesh-team.herokuapp.com/login", {
-      method: "PATCH",
+    console.log(newform);
+    fetch("http://localhost:3001/user", {
+      method: "POST",
+
+      body: newform,
       headers: {
         "Content-Type": "application/json",
       },
-      body: newform,
-    });
-    alert("SignUp Sucsessfull");
-    navigate("/login");
+    })
+      .then((res) => {
+        console.log(res);
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        alert("SignUp  Successfully");
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Invalid Signup");
+      });
   };
 
   return (
@@ -73,7 +86,7 @@ const Signup = () => {
               bg="#f1f2f4"
               type="text"
               size="lg"
-              name="pass"
+              name="password"
               placeholder="Enter Password.."
             />
             <Button onClick={signupfn} w="70%" colorScheme="purple" size="lg">

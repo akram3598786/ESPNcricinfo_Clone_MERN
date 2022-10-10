@@ -1,11 +1,28 @@
 import { Box, Heading, Text, Button } from "@chakra-ui/react";
 import React from "react";
 import NavbarFant from "../Fantacy-navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import Sideimg from "../sideimg/Sideimg";
 const Mycontest = () => {
+  const navigate = useNavigate();
+  React.useEffect(() => {
+    let token = localStorage.getItem("token") || "";
+    if (token.length == 0) {
+      alert("please login");
+      navigate("/login");
+    }
+  }, []);
+
   const { contest } = React.useContext(AuthContext);
   console.log(contest);
+
+  let token = localStorage.getItem("token") || "";
+  if (token.length == 0) {
+    console.log("length zero");
+    alert("please login");
+    navigate("/login");
+  }
 
   return (
     <>
