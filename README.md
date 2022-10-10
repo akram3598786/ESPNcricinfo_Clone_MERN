@@ -17,6 +17,7 @@ We are pursuing a Full Stack Web Development course at Masai school, In Masai sc
 > ### •[Akram](https://github.com/akram3598786)
 > ### • [Manu Mangal](https://github.com/Manu2807)
 > ### • [Ankit Kumar Singh ](https://github.com/meankit2610)
+> ### [Akash Jadhav](https://github.com/Akashjadhav55)
 
 ## Technology Used
 > •  REACT
