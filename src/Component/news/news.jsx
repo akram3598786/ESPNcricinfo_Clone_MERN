@@ -51,7 +51,7 @@ export const News = ({ theme }) => {
     <Flex  justifyContent="space-evenly" margin="15px 0 0 0"> 
 
         <Box>
-          <Heading borderTopRadius="10px" p="15px" border="1px solid #EDEEF0" >Latest News</Heading>
+          <Heading borderTopRadius="10px" fontSize="28px" p="15px" border="1px solid #EDEEF0" >Latest News</Heading>
           {newsdisplay.map((news) =>
             news.story === undefined ? (
               console.log(news)
