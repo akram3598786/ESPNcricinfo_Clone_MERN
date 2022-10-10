@@ -14,10 +14,10 @@ We are pursuing a Full Stack Web Development course at Masai school, In Masai sc
 
 ![image](https://cdn.hashnode.com/res/hashnode/image/upload/v1662785779992/7AgSjYxss.png )
 ## Team Members
-> ### •[Akram](https://github.com/akram3598786)
+> ### • [Akram](https://github.com/akram3598786)
 > ### • [Manu Mangal](https://github.com/Manu2807)
 > ### • [Ankit Kumar Singh ](https://github.com/meankit2610)
-> ### [Akash Jadhav](https://github.com/Akashjadhav55)
+> ### • [Akash Jadhav](https://github.com/Akashjadhav55)
 
 ## Technology Used
 > •  REACT
