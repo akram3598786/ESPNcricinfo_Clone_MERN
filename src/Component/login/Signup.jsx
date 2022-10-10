@@ -6,7 +6,7 @@ import Sideimg from "../sideimg/Sideimg";
 const init = {
   name: "",
   email: "",
-  pass: "",
+  password: "",
 };
 
 const Signup = () => {
@@ -23,16 +23,42 @@ const Signup = () => {
 
   const signupfn = () => {
     let newform = JSON.stringify(form);
-    fetch("https://rupesh-team.herokuapp.com/login", {
-      method: "PATCH",
+    console.log(newform);
+    fetch("http://localhost:8080/user", {
+      method: "POST",
+
+      body: newform,
       headers: {
         "Content-Type": "application/json",
       },
-      body: newform,
-    });
-    alert("SignUp Sucsessfull");
-    navigate("/login");
+    })
+      .then((res) => {
+        console.log(res);
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        alert("SignUp  Successfully");
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Invalid Signup");
+      });
   };
+
+  // const signupfn = () => {
+  //   let newform = JSON.stringify(form);
+  //   fetch("https://rupesh-team.herokuapp.com/login", {
+  //     method: "PATCH",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: newform,
+  //   });
+  //   alert("SignUp Sucsessfull");
+  //   navigate("/login");
+  // };
 
   return (
     <>

@@ -3,20 +3,44 @@ import { Box, Text, Input, Heading, Button } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
 import NavbarFant from "../Fantacy-navbar/Navbar";
 import Sideimg from "../sideimg/Sideimg";
+import { FaStethoscope } from "react-icons/fa";
 const Login = () => {
   const navigate = useNavigate();
-  const [pass, setpass] = React.useState("");
+  const [password, setpass] = React.useState("");
   const [email, setemail] = React.useState("");
-  const [data, setdata] = React.useState({ email: "", pass: "", name: "" });
+  const [data, setdata] = React.useState({ email: "", password: "", name: "" });
 
-  React.useEffect(() => {
-    fetch("https://rupesh-team.herokuapp.com/login")
+  // React.useEffect(() => {
+  //   fetch("https://rupesh-team.herokuapp.com/login")
+  //     .then((res) => res.json())
+  //     .then((res) => setdata(res))
+  //     .catch((err) => alert(err));
+  // }, []);
+
+  function loginuser() {
+    let newform = JSON.stringify({ email, password });
+    console.log(newform);
+    fetch("http://localhost:8080/user/login", {
+      method: "POST",
+
+      body: newform,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((res) => res.json())
-      .then((res) => setdata(res))
-      .catch((err) => alert(err));
-  }, []);
+      .then((res) => {
+        console.log(res);
+        localStorage.setItem("token", res.token);
+
+        alert("Login Successfull");
+        navigate("/matches");
+      })
+      .catch((error) => alert("Invalid Login"));
+  }
+
   function loginfn() {
-    if (email == data.email && pass == data.pass) {
+    if (email == data.email && password == data.password) {
       alert("Login Successfull");
       navigate("/matches");
     } else {
@@ -57,7 +81,7 @@ const Login = () => {
               name="pass"
               placeholder="Enter Password.."
             />
-            <Button onClick={loginfn} w="70%" colorScheme="purple" size="lg">
+            <Button onClick={loginuser} w="70%" colorScheme="purple" size="lg">
               Login
             </Button>
             <Text mb="-12px">Don't Have Account SignUp</Text>

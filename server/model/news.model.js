@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
+import mongoose from "mongoose";
 //comment/
 //
 const newsSchema = new mongoose.Schema({
@@ -17,4 +18,5 @@ const newsSchema = new mongoose.Schema({
   language: String,
 });
 
-module.exports = mongoose.model("News", newsSchema);
+const News = mongoose.model("News", newsSchema);
+export default News;
