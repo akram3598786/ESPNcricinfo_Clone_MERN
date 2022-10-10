@@ -1,5 +1,6 @@
+import { Flex, Heading, Box, Image } from "@chakra-ui/react";
 import React from "react";
-import styles from "./newdiv.module.css"
+import styles from "./news.module.css"
 
 let imgarr=[
     
@@ -41,14 +42,16 @@ export const NavBox=(props)=>
     i=0;
    }
     
-    return <div className={styles.mainbox}  style={theme==="light"?null:{backgroundColor:"#1d1e1f",color:"white",border:"1px solid #2b2c2d"}}  >
+    return <Box w="970px" fontSize="16px"  border="1px solid #EDEEF0" p="10px" >
+    <Flex p="10px" justifyContent="space-around" >
+    <Box p="0 20px 0 0" className={styles.mainbox} >
  
-    <img src={arr[i]} alt="hy" />
-   
-
-<div>
-    <p className={styles.head}>{hline}</p>
-    <p className={styles.con}>{intro}</p>
-</div>
-    </div>
+        <Image className={styles.imagenews} width="390px" height="162.5px"  src={arr[i]} alt="hy" />
+    </Box>
+    <Box >
+        <Heading fontSize="16px" className={styles.head}>{hline}</Heading>
+        <p className={styles.con}>{intro}</p>
+    </Box>
+    </Flex>
+    </Box>
 }

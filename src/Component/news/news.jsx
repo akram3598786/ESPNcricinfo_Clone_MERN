@@ -1,4 +1,5 @@
 import styles from "../CenterBox/center.module.css";
+import styless from "./news.module.css"
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -7,10 +8,12 @@ import {
   getnewerror,
 } from "../../Redux/centrebox/action";
 import { Fetchdata } from "../../Redux/centrebox/action";
-import { RightNavBox } from "../righthand/rightnewdiv";
+import { RightNavBox } from "./rightnewdiv";
 import { Newsmid } from "../newsmidbox/newsmid";
 import {
+  Box,
     Flex,
+    Heading,
   } from "@chakra-ui/react";
   import { NavBox } from "./newdiv";
 
@@ -51,8 +54,10 @@ export const News = ({ theme }) => {
   }
 
   return (
-    <Flex>
-        <div>
+    <Flex  justifyContent="space-evenly" margin="15px 0 0 0"> 
+
+        <Box>
+          <Heading borderTopRadius="10px" p="15px" border="1px solid #EDEEF0" >Latest News</Heading>
           {newsdisplay.map((news) =>
             news.story === undefined ? (
               console.log(news)
@@ -67,17 +72,13 @@ export const News = ({ theme }) => {
               <NavBox key={news.story.id} theme={theme} info={news.story} />
             )
           )}
-        </div>
+        </Box>
 
 
 
-        {/* <div
-            className={styles.threebox}
-            style={{
-              display: "flex",
-              flexDirection : "column"
-            }}
-          >
+      
+          <Box>
+          <Heading borderTopRadius="10px" p="15px" border="1px solid #EDEEF0" fontSize="16px" > Most Read</Heading>
             {newsdisplay.map((news) =>
               news.story === undefined ? (
                 console.log(news)
@@ -90,10 +91,8 @@ export const News = ({ theme }) => {
               )
             )}
 
-          </div> */}
-          <div>
-            
-          </div>
+        
+          </Box>
     
     </Flex>
   )
