@@ -169,7 +169,7 @@ export const Navbar = ({ theme, handleTheme }) => {
             ) : null}
           </Link>
 
-          <Link to="" position="relative" onMouseEnter={() => setopen6(true)}>
+          <Link to="/videos" position="relative" onMouseEnter={() => setopen6(true)}>
             {" "}
             Videos
             {open6 ? (
@@ -293,7 +293,7 @@ export const Navbar = ({ theme, handleTheme }) => {
           <Link className={styles.link} to="">
             Table
           </Link>
-          <Link className={styles.link} to="">
+          <Link className={styles.link} to="/videos">
             Videos
           </Link>
           <Link className={styles.link} to="">
