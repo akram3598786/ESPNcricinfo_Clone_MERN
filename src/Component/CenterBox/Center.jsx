@@ -22,7 +22,9 @@ export const CenterBox = ({ theme }) => {
   const newserror = useSelector((state) => state.error);
 
   React.useEffect(() => {
-    dispatch(Fetchdata());
+   // dispatch(Fetchdata());
+    //dispatch(getData());
+    getData();
   }, []);
 
   // if(newsdisplay.length>4){
@@ -43,10 +45,22 @@ export const CenterBox = ({ theme }) => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+       // console.log(res);
         return dispatch(getnews(res.storyList));
       })
 
+      .catch((error) => dispatch(getnewerror()));
+  }
+
+
+  function getData() {
+    let url = "http://localhost:8080/news";
+    fetch(url)
+      .then((res) => res.json())
+      .then((res) => {
+        //console.log(res[0].storyList)
+        return dispatch(getnews(res[0].storyList));
+      })
       .catch((error) => dispatch(getnewerror()));
   }
 
