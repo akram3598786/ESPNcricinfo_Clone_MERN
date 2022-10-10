@@ -15,6 +15,7 @@ const SingleVideoData = () => {
       console.log(error)
     ))
   }, [data]);
+
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     let id = setInterval(() => {
@@ -23,6 +24,7 @@ const SingleVideoData = () => {
 
     return () => clearInterval(id)
   }, [])
+  
   return (
     <Skeleton isLoaded={loading}>
     <Box>
@@ -33,7 +35,6 @@ const SingleVideoData = () => {
           <Text align={'left'} fontSize={20}>{ele.description}</Text>
         </Flex>
       ))}
-
     </Box>
   </Skeleton>
   )
