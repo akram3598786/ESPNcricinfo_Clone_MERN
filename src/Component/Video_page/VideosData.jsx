@@ -12,7 +12,7 @@ const VideosData = ({ query, title, headTitle, dataShowLimit = [1,2,4], limit = 
             setLoading(true)
         }, 1000)
 
-        return () => clearInterval(id);
+        return () => clearInterval(id); 
     }, [])
 
     useEffect(() => {
@@ -29,7 +29,7 @@ const VideosData = ({ query, title, headTitle, dataShowLimit = [1,2,4], limit = 
     //         color: "white"
     //     } : null
     // }
-
+    
     // const newStyle = getStyle(mode)
 
     let date = new Date().toLocaleString("en-US", { day: '2-digit' });

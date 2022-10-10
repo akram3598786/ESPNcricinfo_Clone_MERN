@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(cors());
 app.use("/news",newsRouter)
 
-app.listen(PORT, async () => {
+app.listen(process.env.PORT || PORT, async () => {
     await connection
     console.log(`server Listening on port ${PORT}`)
 })
