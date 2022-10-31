@@ -36,9 +36,3 @@ We are pursuing a Full Stack Web Development course at Masai school, In Masai sc
 > • Postman
 
 
-## Project link
-<!-- > ### •[ESPNcricinfo](https://espncricinfoclone.netlify.app/) -->
-
-## Github link
-<!-- > ### •[ESPNcricinfo](https://github.com/Akash2377/ESPNcricinfo_Clone) -->
-
