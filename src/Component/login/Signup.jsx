@@ -24,7 +24,7 @@ const Signup = () => {
   const signupfn = () => {
     let newform = JSON.stringify(form);
     console.log(newform);
-    fetch("", {
+    fetch("https://dark-gold-firefly-gear.cyclic.app/user/", {
       method: "POST",
 
       body: newform,

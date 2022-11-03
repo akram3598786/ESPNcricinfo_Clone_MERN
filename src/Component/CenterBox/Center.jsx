@@ -53,7 +53,7 @@ export const CenterBox = ({ theme }) => {
   }
 
   function getData() {
-    let url = "http://localhost:8080/news";
+    let url = "https://dark-gold-firefly-gear.cyclic.app/news";
     fetch(url)
       .then((res) => res.json())
       .then((res) => {
