@@ -22,7 +22,7 @@ export const CenterBox = ({ theme }) => {
   const newserror = useSelector((state) => state.error);
 
   React.useEffect(() => {
-   // dispatch(Fetchdata());
+    // dispatch(Fetchdata());
     //dispatch(getData());
     getData();
   }, []);
@@ -45,13 +45,12 @@ export const CenterBox = ({ theme }) => {
     })
       .then((res) => res.json())
       .then((res) => {
-       // console.log(res);
+        // console.log(res);
         return dispatch(getnews(res.storyList));
       })
 
       .catch((error) => dispatch(getnewerror()));
   }
-
 
   function getData() {
     let url = "http://localhost:8080/news";

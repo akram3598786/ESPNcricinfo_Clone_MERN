@@ -24,7 +24,7 @@ const Signup = () => {
   const signupfn = () => {
     let newform = JSON.stringify(form);
     console.log(newform);
-    fetch("http://localhost:8080/user", {
+    fetch("", {
       method: "POST",
 
       body: newform,
