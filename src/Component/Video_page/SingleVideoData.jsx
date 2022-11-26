@@ -8,7 +8,7 @@ const SingleVideoData = () => {
   const location = useLocation();
   const query = location.state?.query;
   const title = location.state?.title;
-  
+
   useEffect(() => {
     axios.get(`https://apna-mock-server.herokuapp.com/espncricinfoData${query}?q=${title}`).then(res => (
       setData(res.data)

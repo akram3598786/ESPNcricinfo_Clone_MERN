@@ -173,11 +173,15 @@ export const Navbar = ({ theme, handleTheme }) => {
             ) : null}
           </Link>
 
+
+          <Link to="/videos" position="relative" onMouseEnter={() => setopen6(true)}>
+
           <Link
             to="/videos"
             position="relative"
             onMouseEnter={() => setopen6(true)}
           >
+
             {" "}
             Videos
             {open6 ? (
