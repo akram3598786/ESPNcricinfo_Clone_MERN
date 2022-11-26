@@ -3,10 +3,25 @@ import React from "react";
 import NavbarFant from "../Fantacy-navbar/Navbar";
 import { AuthContext } from "../../context/AuthContext";
 import Sideimg from "../sideimg/Sideimg";
+import { useNavigate } from "react-router-dom";
 const Mycontest = () => {
+  const navigate = useNavigate();
+  React.useEffect(() => {
+    let token = localStorage.getItem("token") || "";
+    if (token.length == 0) {
+      alert("please login");
+      navigate("/login");
+    }
+  }, []);
+
   const { contest } = React.useContext(AuthContext);
   console.log(contest);
-
+  let token = localStorage.getItem("token") || "";
+  if (token.length == 0) {
+    console.log("length zero");
+    alert("please login");
+    navigate("/login");
+  }
   return (
     <>
       <NavbarFant />
