@@ -24,7 +24,7 @@ const Signup = () => {
   const signupfn = () => {
     let newform = JSON.stringify(form);
     console.log(newform);
-    fetch("http://localhost:8080/user", {
+    fetch("https://dark-gold-firefly-gear.cyclic.app/user/", {
       method: "POST",
 
       body: newform,
@@ -99,7 +99,7 @@ const Signup = () => {
               bg="#f1f2f4"
               type="text"
               size="lg"
-              name="pass"
+              name="password"
               placeholder="Enter Password.."
             />
             <Button onClick={signupfn} w="70%" colorScheme="purple" size="lg">

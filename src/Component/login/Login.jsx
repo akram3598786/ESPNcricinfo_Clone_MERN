@@ -20,7 +20,7 @@ const Login = () => {
   function loginuser() {
     let newform = JSON.stringify({ email, password });
     console.log(newform);
-    fetch("http://localhost:8080/user/login", {
+    fetch("https://dark-gold-firefly-gear.cyclic.app/user/login", {
       method: "POST",
 
       body: newform,
@@ -78,7 +78,7 @@ const Login = () => {
               bg="#f1f2f4"
               type="text"
               size="lg"
-              name="pass"
+              name="password"
               placeholder="Enter Password.."
             />
             <Button onClick={loginuser} w="70%" colorScheme="purple" size="lg">

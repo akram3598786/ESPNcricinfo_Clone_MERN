@@ -20,25 +20,24 @@ We are pursuing a Full Stack Web Development course at Masai school, In Masai sc
 > ### • [Akash Jadhav](https://github.com/Akashjadhav55)
 
 ## Technology Used
-> •  REACT
-> •  REDUX
+> • REACT
+> • REDUX
 > • CHAKRA UI
 > • STYLED-COMPONENTS
 > • REACT-ROUTER
 > • DOM
 > • Local Storage
 > • JSON Server
+> • Node.js
+> • Express
+> • MongoDB
 
 ## Tools
 > • VS Code
 > • Github
 > • Redux Div tool
 > • Postman
+> • Heroku Deployment
+> • Netlify
 
-
-## Project link
-<!-- > ### •[ESPNcricinfo](https://espncricinfoclone.netlify.app/) -->
-
-## Github link
-<!-- > ### •[ESPNcricinfo](https://github.com/Akash2377/ESPNcricinfo_Clone) -->
 
