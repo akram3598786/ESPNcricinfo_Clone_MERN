@@ -119,8 +119,12 @@ export const Navbar = ({ theme, handleTheme }) => {
             ) : null}
           </Link>
 
-          <Link to="" position="relative" onMouseEnter={() => setopen4(true)}>
-            {" "}
+          <Link
+            to="/latest-news"
+            position="relative"
+            onMouseEnter={() => setopen4(true)}
+          >
+            {""}
             News
             {open4 ? (
               <div
@@ -169,7 +173,15 @@ export const Navbar = ({ theme, handleTheme }) => {
             ) : null}
           </Link>
 
+
           <Link to="/videos" position="relative" onMouseEnter={() => setopen6(true)}>
+
+          <Link
+            to="/videos"
+            position="relative"
+            onMouseEnter={() => setopen6(true)}
+          >
+
             {" "}
             Videos
             {open6 ? (
