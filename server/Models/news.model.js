@@ -1,7 +1,6 @@
-// const mongoose = require("mongoose");
+
 import mongoose from "mongoose";
-//comment/
-//
+
 const newsSchema = new mongoose.Schema({
   title: String,
   keywords: [String],

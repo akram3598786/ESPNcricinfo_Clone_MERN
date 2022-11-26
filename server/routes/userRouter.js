@@ -1,6 +1,6 @@
 import express from "express";
 import UserModel from "../Models/User.js";
-import { sign } from "../util/jws.js";
+import { sign } from "../util/jwt.js";
 const user_router = express.Router();
 
 user_router.get("/", async (req, res) => {

@@ -1,5 +1,5 @@
 import express from "express";
-import ConnectDB from "./database/server.js";
+import ConnectDB from "./Config/server.js";
 import user_router from "./routes/userRouter.js";
 import newsRouter from "./routes/news.js";
 import cors from "cors";
@@ -16,5 +16,5 @@ app.use("/news", newsRouter);
 
 app.listen(PORT, async () => {
     await ConnectDB();
-    console.log(`server Listening on port ${PORT}`)
+    console.log(`server Listening on port ${PORT}`);
 });
