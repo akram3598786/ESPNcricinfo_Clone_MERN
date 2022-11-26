@@ -1,31 +1,20 @@
-// const express = require("express");
 import express from "express";
-import connection from "./database/server.js";
-import user_router from "./Connectors/userRouter.js";
-// const connection = require('./config/db')
-// import connection from "./config/db.js";
-// const newsRouter = require('./routes/news.js')
+import ConnectDB from "./database/server.js";
+import user_router from "./routes/userRouter.js";
 import newsRouter from "./routes/news.js";
-// const cors = require('cors');
 import cors from "cors";
 import authfunc from "./middleware/auth.js";
+
 const PORT = process.env.PORT || 8080;
 const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(authfunc);
-app.use("/user", user_router);
 
+app.use("/user", user_router);
 app.use("/news", newsRouter);
 
-<<<<<<< HEAD
-app.listen(process.env.PORT || PORT, async () => {
-    await connection
-    console.log(`server Listening on port ${PORT}`)
-})
-=======
 app.listen(PORT, async () => {
-  await connection;
-  console.log(`server Listening on port ${PORT}`);
+    await ConnectDB();
+    console.log(`server Listening on port ${PORT}`)
 });
->>>>>>> c459cbc29ccb805514cd1f80ffcb6009a4e3d917
