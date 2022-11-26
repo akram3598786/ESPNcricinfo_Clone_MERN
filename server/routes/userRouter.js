@@ -24,19 +24,19 @@ user_router.post("/", async (req, res) => {
 user_router.post("/login", async (req, res) => {
   try {
     const body = req.body;
-    console.log("hy");
-    console.log(body.email);
+  //  console.log("hy");
+  //  console.log(body.email);
     const user = await UserModel.findOne({ email: body.email });
-    console.log(user.email, user.password);
+   // console.log(user.email, user.password);
 
     if (user.password !== body.password) {
-      console.log("yes");
+   //   console.log("yes");
       req.send({
         message: "Invalid email address",
       });
     } else {
       const token = sign(user.toJSON());
-      console.log("hy");
+   //   console.log("hy");
       res.send({
         message: "Login Successful",
         token,
@@ -50,7 +50,6 @@ user_router.post("/login", async (req, res) => {
 user_router.get("/loginuser", async (req, res) => {
   try {
     if (req.user) {
-      console.log("Hy arvind");
       res.send(req.user);
     } else {
       req.send("Login once");
