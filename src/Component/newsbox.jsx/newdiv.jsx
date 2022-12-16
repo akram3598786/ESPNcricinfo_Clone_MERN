@@ -42,10 +42,8 @@ export const NavBox=(props)=>
    }
     
     return <div className={styles.mainbox}  style={theme==="light"?null:{backgroundColor:"#1d1e1f",color:"white",border:"1px solid #2b2c2d"}}  >
- 
     <img src={arr[i]} alt="hy" />
    
-
 <div>
     <p className={styles.head}>{hline}</p>
     <p className={styles.con}>{intro}</p>

@@ -2,8 +2,8 @@ import { Flex, Heading, Box, Image } from "@chakra-ui/react";
 import React from "react";
 import styles from "./news.module.css"
 
-let imgarr=[
-    
+let imgarr = [
+
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcF4RzKYHWEGg4nMND0KWR4GdzIgWWkBVyjQ&usqp=CAU",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNu54tTRRCKQ7yhyck8mvX440QodlqcUaFxA&usqp=CAU",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ-BfW5qht04iHrdbCdgng8ct1Sm2xW9J0vQ&usqp=CAU",
@@ -18,7 +18,7 @@ let imgarr=[
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIzI56QKuAv-dtROkwqw9af5ObDtbXrmuynQ&usqp=CAU"
 
 ]
-let arr=[
+let arr = [
     "https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/345500/345596.6.jpg",
     "https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/345600/345624.6.jpg",
     "https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/345300/345318.6.jpg",
@@ -31,26 +31,25 @@ let arr=[
     "https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/345500/345579.6.jpg",
     "https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/345500/345590.6.jpg"
 ]
-let i=0;
-export const NavBox=(props)=>
-{
- const  {hline,intro}=props.info
-  const theme=props.theme
+let i = 0;
+export const NavBox = (props) => {
+    const { hline, intro } = props.info
+    const theme = props.theme
     //console.log(info);
-   i++;
-   if(i>arr.length-1){
-    i=0;
-   }
-    
-    return <Box w="970px" fontSize="16px"  border="1px solid #EDEEF0" p="20px"  >
-    {/* <Flex justifyContent="space-around" > */}
-    {/* <Box  > */}
-    <div style={{gap : "30px", display : "flex", flexDirection : "row" }}>
-        <img className={styles.imagenews} style={{width : "290px" , height : "164px"}} src={arr[i]} alt="hy" />
-        <div>
-        <Heading fontSize="16px" >{hline}</Heading>
-        <p>{intro}</p>
+    i++;
+    if (i > arr.length - 1) {
+        i = 0;
+    }
+
+    return <Box w="970px" fontSize="16px" border="1px solid #EDEEF0" p="20px"  >
+        {/* <Flex justifyContent="space-around" > */}
+        {/* <Box  > */}
+        <div style={{ gap: "30px", display: "flex", flexDirection: "row" }}>
+            <img className={styles.imagenews} style={{ width: "290px", height: "164px" }} src={arr[i]} alt="hy" />
+            <div>
+                <Heading fontSize="16px" >{hline}</Heading>
+                <p>{intro}</p>
+            </div>
         </div>
-    </div>
     </Box>
 }

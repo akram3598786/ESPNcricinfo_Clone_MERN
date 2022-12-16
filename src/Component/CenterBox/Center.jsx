@@ -22,35 +22,8 @@ export const CenterBox = ({ theme }) => {
   const newserror = useSelector((state) => state.error);
 
   React.useEffect(() => {
-    // dispatch(Fetchdata());
-    //dispatch(getData());
     getData();
   }, []);
-
-  // if(newsdisplay.length>4){
-  // for(let i=0;i<4;i++){
-  //   arr2[i]=newsdisplay[i];
-  // }
-  // }
-  //  arr1=setarr(arr2)
-
-  function getnewsdata() {
-    dispatch(getnewsloading());
-    fetch(`https://cricbuzz-cricket.p.rapidapi.com/news/v1/index`, {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": "bd73fbab72msh41aa8b1ae34d02fp1118fcjsnb86ef1d3cf9d",
-        "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com",
-      },
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        // console.log(res);
-        return dispatch(getnews(res.storyList));
-      })
-
-      .catch((error) => dispatch(getnewerror()));
-  }
 
   function getData() {
     let url = "https://dark-gold-firefly-gear.cyclic.app/news";
@@ -70,31 +43,33 @@ export const CenterBox = ({ theme }) => {
         theme === "light" ? null : { backgroundColor: "black", color: "black" }
       }
       className={styles.centerbox1}
-    >
+    >                                             
       <div>
         <img
           src="https://tpc.googlesyndication.com/simgad/16233217720762028300?"
-          alt="Advertisment Logo"
+          alt="Advertisment Loading"
         />
       </div>
+                                                  {/*============ Main Div ==============*/} 
       <div
-        className={styles.midbox}
+        className={styles.container}
         style={
           theme === "light"
             ? null
             : { backgroundColor: "black", color: "black" }
         }
       >
-        <div className={styles.leftbox}>
+
+        <div className={styles.leftbox}>          {/*============ Left Div ==============*/}
           <div
             style={
               theme === "light"
                 ? null
                 : {
-                    backgroundColor: "#1d1e1f",
-                    color: "white",
-                    border: "1px solid #2b2c2d",
-                  }
+                  backgroundColor: "#1d1e1f",
+                  color: "white",
+                  border: "1px solid #2b2c2d",
+                }
             }
             className={styles.firstbox}
           >
@@ -115,10 +90,10 @@ export const CenterBox = ({ theme }) => {
               theme === "light"
                 ? null
                 : {
-                    backgroundColor: "#1d1e1f",
-                    color: "white",
-                    border: "1px solid #2b2c2d",
-                  }
+                  backgroundColor: "#1d1e1f",
+                  color: "white",
+                  border: "1px solid #2b2c2d",
+                }
             }
           >
             <h1 style={{ fontWeight: "500", marginTop: "10px" }}>Key Series</h1>
@@ -127,10 +102,10 @@ export const CenterBox = ({ theme }) => {
                 theme === "light"
                   ? { width: "100%" }
                   : {
-                      backgroundColor: "#2b2c2d",
-                      color: "#2b2c2d",
-                      width: "100%",
-                    }
+                    backgroundColor: "#2b2c2d",
+                    color: "#2b2c2d",
+                    width: "100%",
+                  }
               }
             />
             <h1>
@@ -139,7 +114,7 @@ export const CenterBox = ({ theme }) => {
             </h1>{" "}
             <h1>
               <FaAngleRight color="#03a9f4" />
-              England vIndia "(W)"
+              England vs India "(W)"
             </h1>
             <h1>
               {" "}
@@ -206,17 +181,18 @@ export const CenterBox = ({ theme }) => {
               -Archives
             </h1>
           </div>
+
           <div
+            className={styles.keyseries}
             style={
               theme === "light"
                 ? null
                 : {
-                    backgroundColor: "#1d1e1f",
-                    color: "white",
-                    border: "1px solid #2b2c2d",
-                  }
+                  backgroundColor: "#1d1e1f",
+                  color: "white",
+                  border: "1px solid #2b2c2d",
+                }
             }
-            className={styles.keyseries}
           >
             <h1 style={{ fontWeight: "500", marginTop: "10px" }}>
               Quick Links
@@ -248,15 +224,16 @@ export const CenterBox = ({ theme }) => {
               Haan Ya Naa
             </h1>
           </div>
+
           <div
             style={
               theme === "light"
                 ? null
                 : {
-                    backgroundColor: "#1d1e1f",
-                    color: "white",
-                    border: "1px solid #2b2c2d",
-                  }
+                  backgroundColor: "#1d1e1f",
+                  color: "white",
+                  border: "1px solid #2b2c2d",
+                }
             }
             className={styles.keyseries}
           >
@@ -279,10 +256,10 @@ export const CenterBox = ({ theme }) => {
               theme === "light"
                 ? null
                 : {
-                    backgroundColor: "#1d1e1f",
-                    color: "white",
-                    border: "1px solid #2b2c2d",
-                  }
+                  backgroundColor: "#1d1e1f",
+                  color: "white",
+                  border: "1px solid #2b2c2d",
+                }
             }
             className={styles.keyseries}
           >
@@ -313,10 +290,10 @@ export const CenterBox = ({ theme }) => {
               theme === "light"
                 ? null
                 : {
-                    backgroundColor: "#1d1e1f",
-                    color: "white",
-                    border: "1px solid #2b2c2d",
-                  }
+                  backgroundColor: "#1d1e1f",
+                  color: "white",
+                  border: "1px solid #2b2c2d",
+                }
             }
             className={styles.keyseries}
           >
@@ -335,18 +312,19 @@ export const CenterBox = ({ theme }) => {
             </h1>
           </div>
         </div>
+                                                   {/*============ Mid Div ==============*/}
         <div
-          className={styles.secbox}
+          className={styles.midbox}
           style={
             theme === "light"
               ? null
               : {
-                  backgroundColor: "#1d1e1f",
-                  color: "white",
-                  border: "1px solid #2b2c2d",
-                }
+                backgroundColor: "#1d1e1f",
+                color: "white",
+                border: "1px solid #2b2c2d",
+              }
           }
-        >
+        >                                              
           <img
             src="https://tpc.googlesyndication.com/simgad/17909822381541812721?"
             alt="adImage"
@@ -356,15 +334,16 @@ export const CenterBox = ({ theme }) => {
             src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_720/lsci/db/PICTURES/CMS/345300/345311.6.jpg"
             alt="adimg"
           />
+
           <div
             style={
               theme === "light"
                 ? null
                 : {
-                    backgroundColor: "#1d1e1f",
-                    color: "white",
-                    border: "1px solid #2b2c2d",
-                  }
+                  backgroundColor: "#1d1e1f",
+                  color: "white",
+                  border: "1px solid #2b2c2d",
+                }
             }
             className={styles.newsfeed}
           >
@@ -375,6 +354,8 @@ export const CenterBox = ({ theme }) => {
             </p>
           </div>
           <hr />
+           
+           {/*======= Current Math Scores =======*/}
           <Score
             info={{
               team1: "India A",
@@ -402,54 +383,47 @@ export const CenterBox = ({ theme }) => {
           >
             {newsdisplay.map((news) =>
               news.story === undefined ? (
-                console.log(news)
+                console.log("News 1st",news)
               ) : (
-                <RightNavBox
-                  key={news.story.id}
-                  theme={theme}
-                  info={news.story}
-                />
+                null
               )
             )}
 
             <div
               style={{
                 border: "1px solid  #ebebeb",
-                position: "absolute",
-                width: "100%",
-                top: "187px",
+                
+                width: "630px",
+                margin : "auto",
+                
                 padding: "0px",
+                backgroundColor : "red",
               }}
             >
               <Newsmid theme={theme} />
             </div>
-          </div>
+          </div> 
 
           {newsdisplay.map((news) =>
             news.story === undefined ? (
-              console.log(news)
+              console.log("News 2nd",news)
             ) : (
               <NavBox key={news.story.id} theme={theme} info={news.story} />
             )
           )}
-          {newsdisplay.map((news) =>
-            news.story === undefined ? (
-              console.log(news)
-            ) : (
-              <NavBox key={news.story.id} theme={theme} info={news.story} />
-            )
-          )}
+          
         </div>
-        <div className={styles.third}>
+                                                  {/*============ Right Div ==============*/}
+        <div className={styles.third}>            
           <div
             style={
               theme === "light"
                 ? null
                 : {
-                    backgroundColor: "#1d1e1f",
-                    color: "white",
-                    border: "1px solid #2b2c2d",
-                  }
+                  backgroundColor: "#1d1e1f",
+                  color: "white",
+                  border: "1px solid #2b2c2d",
+                }
             }
             className={styles.keyseries}
           >
@@ -512,7 +486,7 @@ export const CenterBox = ({ theme }) => {
           />
         </div>
       </div>
-
+                                                  {/*============ Footer Div ==============*/}
       <Footer theme={theme} />
     </div>
   );

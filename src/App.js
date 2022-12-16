@@ -54,10 +54,9 @@ export function App() {
           <Route path="/commentry" element={<Commentary />}></Route>
           <Route path="/playingxi" element={<PlayingXI />}></Route>
           <Route path="/pointtable" element={<PonitTable />}></Route>
-          <Route path="/videos" element={<Videos/>}></Route>
-          <Route path="/:title/:heading" element={<SingleVideoData/>}></Route>
+          <Route path="/videos" element={<Videos />}></Route>
+          <Route path="/:title/:heading" element={<SingleVideoData />}></Route>
           <Route path="/latest-news" element={<News />}></Route>
-
         </Routes>
       </>
     </ChakraProvider>

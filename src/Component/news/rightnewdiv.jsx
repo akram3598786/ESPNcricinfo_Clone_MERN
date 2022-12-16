@@ -29,7 +29,6 @@ export const RightNavBox=(props)=>
    if(i>imgarr.length-1){
     i=0;
    }
-    console.log(i);
 
     return <Box w="302px"  border="1px solid #EDEEF0" borderBottomColor="#ffffff" p="10px">
     <Flex p="10px" justifyContent="space-around" >

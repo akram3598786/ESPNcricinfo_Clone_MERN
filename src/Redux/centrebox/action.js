@@ -1,5 +1,6 @@
 import * as types from "./actiontype";
 import { useDispatch } from "react-redux";
+
 export const getnews = (data) => ({
   type: types.GETNEWS,
   payload: data,
@@ -26,9 +27,9 @@ export const Fetchdata = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res.storyList);
+        // console.log(res.storyList);
         return dispatch(getnews(res.storyList));
       })
-      .catch((error) => dispatch(getnewerror()));
+      .catch((error) => dispatch(getnewerror(error)));
   };
 };

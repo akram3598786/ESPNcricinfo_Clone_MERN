@@ -1,4 +1,5 @@
 import styles from "./Score.module.css";
+
 export const Score = (props) => {
   let { team1, team2, score, status, con, head, image1, image2 } = props.info;
   let theme = props.theme;
@@ -37,7 +38,7 @@ export const Score = (props) => {
       </div>
       <hr />
 
-      <div className={styles.conten}>
+      <div className={styles.content}>
         <p
           style={
             theme === "light"
@@ -47,6 +48,7 @@ export const Score = (props) => {
         >
           LIVES - Updates Only{" "}
         </p>
+
         <div>
           <img
             style={{ width: "20px", display: "inline" }}
@@ -63,6 +65,7 @@ export const Score = (props) => {
             {team1} <span>{score}</span>
           </h1>
         </div>
+        
         <div>
           <img style={{ width: "20px" }} src={image2} alt="hy" />{" "}
           <h2
